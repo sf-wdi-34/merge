@@ -63,12 +63,12 @@ Hints:
   * <details><summary>
   How can you simplify this big-`O()` result?</summary>
 
-  You can use a trick to make this simpler:
+   You can use a trick to make this simpler:
 
-  - say the larger array's size is `n`
-  - we know the smaller array size (`m`) is less than or equal to `n`
-  - since big-`O()` overestimates, we can convert `O(m + n)` to `O(n + n)`
-  - simplify further to get  `O(n)`
+   - say the larger array's size is `n`
+   - we know the smaller array size (`m`) is less than or equal to `n`
+   - since big-`O()` overestimates, we can convert `O(m + n)` to `O(n + n)`
+   - simplify further to get  `O(n)`
   </details>
 
 #### But what about space?
@@ -133,22 +133,21 @@ rspec -e "different length"
 
 #### Hints:
 
-* <details><summary>
-  What if the arrays have different lengths?
+<details><summary>  What if the arrays have different lengths?
   </summary>
-  You will probably find you run out of elements to compare at some point.  If all the elements from one array have already been added to the results, what can you say about the rest of the elements left over in the other array?
+    You will probably find you run out of elements to compare at some point.  If all the elements from one array have already been added to the results, what can you say about the rest of the elements left over in the other array?
 
-    <details><summary>click to see</summary>
-    - All of the rest of the elements in the input array must be greater than every element in the results array.
-    - All these elements are already in sorted order.
-    - We can just add the rest of the elements to the results array!
-    </details>
+     <details><summary>click to see</summary>
+     - All of the rest of the elements in the input array must be greater than every element in the results array.
+     - All these elements are already in sorted order.
+     - We can just add the rest of the elements to the results array!
+     </details>
   </details>
 
-* <details><summary>
-  What happens if one of the elements can't be compared?
+<br>
+<details><summary> What happens if one of the elements can't be compared?
   </summary>
-  You have to be able to compare! This would completely break the code, so it's a good case to test rule out inside your function.
+   You have to be able to compare! This would completely break the code, so it's a good case to test rule out inside your function.
   </details>
 
 <!-- 
